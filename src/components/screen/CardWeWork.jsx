@@ -2,6 +2,10 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { TiSocialFacebook } from "react-icons/ti";
+import { SlSocialInstagram } from "react-icons/sl";
+import { FaXTwitter } from "react-icons/fa6";
 
 const data = [
     {
@@ -82,7 +86,7 @@ const CardWeWork = () => {
         
       };
   return (
-    <div>
+    <div className=' relative'>
          <section className=" w-full md:w-2/3 flex flex-col mx-auto py-20 ">
         <div className="  text-5xl font-semibold r">
           <h1 className=' flex justify-center  mt-20'>Our Services</h1>
@@ -104,6 +108,15 @@ const CardWeWork = () => {
             </div>
           ))}
         </Slider>
+      </section>
+      <section className=' fixed bottom-10'>
+        <div className=' mx-5 flex flex-col gap-10'>
+        <TiSocialLinkedin  className=' text-[50px]  rounded-full'/>
+        <TiSocialFacebook  className=' text-[50px]'/>
+        <SlSocialInstagram  className=' text-[50px]' />
+        <FaXTwitter   className=' text-[50px]'/>
+
+        </div>
       </section>
     </div>
   )
