@@ -11,6 +11,7 @@ const App = () => {
        <Routes>
            <Route path="/" element={<MainScreen/>}/>
        </Routes> 
+       <Footer/>
     </div>
   )
 }

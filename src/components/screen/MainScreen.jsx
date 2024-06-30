@@ -1,29 +1,34 @@
-import React from "react";
-import { CardWeWork } from "../index";
+import React, { useEffect } from "react";
+import { CardWeWork, RunningText } from "../index";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import CountUp from "react-countup";
 
 const MainScreen = () => {
+
+ 
+  const [ text ] = useTypewriter({
+    words: ["Web Development", "App Development", "Personal Branding"],
+    loop: {},
+  });
   return (
     <div className=" mt-20">
       {/* Section 1 */}
       <section className=" h-[400px] text-white">
-        <div className="px-10 w-2/3">
-          <div className=" text-8xl md:2xl ">
-            We’re ready to share our deepest expertice in
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2 */}
-      {/* <section className=" bg-[#181717] w-full  backdrop-blur-md mt-[12rem] backdrop filter">
-        <div className="bg-[#181717] w-2/4 flex mx-auto justify-between py-10">
-          <h1 className="bg-[#181717] text-4xl">Our Approach</h1>
-          <h1 className="bg-[#181717] w-[500px]">
-            Ikokas aids clients to embrace technology so they can reshape their
-            business, become more proactive, and propels them towards market
-            leadership.
+       <div className=" flex">
+       <div className="px-10 w-2/3">
+          <h1 className=" text-8xl md:2xl ">
+            We’re ready to share our deepest expertice <br /> in 
+            <span className=" mx-5 text-7xl" style={{ fontWeight: 'bold' , color:'red'}}>{text}</span>
+            <span className=" text-7xl" style={{ color: "red" }}>
+              <Cursor />
+            </span>
           </h1>
         </div>
-      </section> */}
+        
+       </div>
+      </section>
+
+    
 
       {/* section 3 */}
       <section className=" w-5/6 mt-28 flex mx-auto ">
@@ -42,7 +47,11 @@ const MainScreen = () => {
           <div className=" flex flex-col ">
             <div className=" flex flex-col  h-[250px]">
               <h1 className=" text-[55px] text-orange-600 font-semibold">
-                200+ Projects
+             <CountUp
+                    start={0}
+                    end={100}
+                    duration={3}
+                className=" text-orange-600" />+  Projects
               </h1>
               <h1 className="w-[300px] text-xl leading-[40px]">
                 completed for a number of businesses from e-commerce, retail,
@@ -51,7 +60,11 @@ const MainScreen = () => {
             </div>
             <div className=" flex flex-col h-[250px]">
               <h1 className=" text-[55px] text-orange-600 font-semibold">
-                13+ Awards
+              <CountUp
+                    start={0}
+                    end={10}
+                    duration={3}
+                className=" text-orange-600" />+  Awards
               </h1>
               <h1 className="w-[300px] text-xl leading-[40px]">
                 from various exhibitions and conferences
@@ -59,7 +72,11 @@ const MainScreen = () => {
             </div>
             <div className=" flex flex-col h-[250px]">
               <h1 className=" text-[55px] text-orange-600 font-semibold">
-                80+
+              <CountUp
+                    start={0}
+                    end={100}
+                    duration={3}
+                className=" text-orange-600" />+ 
               </h1>
               <h1 className="w-[300px] text-xl leading-[40px]">
                 highly experienced professionals
@@ -69,13 +86,21 @@ const MainScreen = () => {
           <div className=" flex flex-col">
             <div className=" flex flex-col h-[250px]">
               <h1 className=" text-[55px] text-orange-600 font-semibold">
-                10+ Years
+              <CountUp
+                    start={0}
+                    end={3}
+                    duration={3}
+                className=" text-orange-600" />+  Years
               </h1>
               <h1 className="w-[300px] text-xl leading-[40px]">of expertise</h1>
             </div>
             <div className=" flex flex-col h-[250px]">
               <h1 className=" text-[55px] text-orange-600 font-semibold">
-                50+
+              <CountUp
+                    start={0}
+                    end={50}
+                    duration={3}
+                className=" text-orange-600" />+ 
               </h1>
               <h1 className="w-[300px] text-xl leading-[40px]">
                 delighted customers

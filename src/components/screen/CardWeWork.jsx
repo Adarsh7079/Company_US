@@ -9,36 +9,32 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const data = [
     {
-      img: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTqIrvgbAP4kFd6Vjfe4IwSEt1N0QavTqWZo_9iijFTkLdgPLIYHx-8_ceL1wOCHzlhc&usqp=CAU`,
-      name: `Priya`,
-      message:`Ikokas is very good at their job and is able to make everything I desire so effortlessly. 
-      My initial idea was augmented manifold thanks to this heaven-sent idea from Ikokas. Masoom and Ikokas 
-      have/are working very hard to make my idea as fantastic as possible. 
-      I’d promote them to anyone including Mark Zuckerberg`,
-      designation:`CEO Intell`,
-    
-    },
-    {
-      img: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTqIrvgbAP4kFd6Vjfe4IwSEt1N0QavTqWZo_9iijFTkLdgPLIYHx-8_ceL1wOCHzlhc&usqp=CAU`,
-      name: `Priya`,
-      message:`Ikokas is very good at their job and is able to make everything I desire so effortlessly. 
+      img: `./ss1.png`,  name: `Priya`,
+      message:`codeVision is very good at their job and is able to make everything I desire so effortlessly. 
       My initial idea was augmented manifold thanks to this heaven-sent idea from Ikokas. Masoom and Ikokas 
       have/are working very hard to make my idea as fantastic as possible. 
       I’d promote them to anyone including Mark Zuckerberg`,
       designation:`CEO Intell`,
     },
     {
-      img: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTqIrvgbAP4kFd6Vjfe4IwSEt1N0QavTqWZo_9iijFTkLdgPLIYHx-8_ceL1wOCHzlhc&usqp=CAU`,
-      name: `Priya`,
-      message:`Ikokas is very good at their job and is able to make everything I desire so effortlessly. 
+      img: `./ss2.png`,  name: `Priya`,
+      message:`codeVision is very good at their job and is able to make everything I desire so effortlessly. 
       My initial idea was augmented manifold thanks to this heaven-sent idea from Ikokas. Masoom and Ikokas 
       have/are working very hard to make my idea as fantastic as possible. 
       I’d promote them to anyone including Mark Zuckerberg`,
       designation:`CEO Intell`,
     },
-    { img: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTqIrvgbAP4kFd6Vjfe4IwSEt1N0QavTqWZo_9iijFTkLdgPLIYHx-8_ceL1wOCHzlhc&usqp=CAU`,
-      name: `Priya`,
-      message:`Ikokas is very good at their job and is able to make everything I desire so effortlessly. 
+    {
+      img: `./ss2.png`,  name: `Priya`,
+      message:`codeVision is very good at their job and is able to make everything I desire so effortlessly. 
+      My initial idea was augmented manifold thanks to this heaven-sent idea from Ikokas. Masoom and Ikokas 
+      have/are working very hard to make my idea as fantastic as possible. 
+      I’d promote them to anyone including Mark Zuckerberg`,
+      designation:`CEO Intell`,
+    },
+    { img: `./ss1.png`,
+        name: `Priya`,
+      message:`CodeVision is very good at their job and is able to make everything I desire so effortlessly. 
       My initial idea was augmented manifold thanks to this heaven-sent idea from Ikokas. Masoom and Ikokas 
       have/are working very hard to make my idea as fantastic as possible. 
       I’d promote them to anyone including Mark Zuckerberg`,
