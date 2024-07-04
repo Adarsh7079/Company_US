@@ -85,7 +85,7 @@ const CardWeWork = () => {
     <div className=' relative'>
          <section className=" w-full md:w-2/3 flex flex-col mx-auto py-20 ">
         <div className="  text-5xl font-semibold r">
-          <h1 className=' flex justify-center  mt-20'>Our Services</h1>
+          <h1 className=' flex justify-center  mt-20'>Happy Client</h1>
         </div>
         <Slider {...settings} className=' text-[72px] mt-10 py-10'>
           {data.map((d) => (

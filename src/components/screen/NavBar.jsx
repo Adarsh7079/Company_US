@@ -1,6 +1,8 @@
 import React from 'react'
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const show=props.show;
+  const setShow=props.setShow;
   return (
    <div >
       <div className='flex h-[40px] justify-between items-center px-10 mt-5'>
@@ -11,7 +13,7 @@ const NavBar = () => {
           <a href="">About</a>
           <a href="">Services</a>
           <a href="">Values</a>
-          <a href="">Contacts</a>
+          <a onClick={(e)=>props.setShow(!show)} href="">Contacts</a>
         </div>
     </div>
    </div>
