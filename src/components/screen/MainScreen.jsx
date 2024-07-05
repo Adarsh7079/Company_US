@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import { CardWeWork, RunningText } from "../index";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import CountUp from "react-countup";
@@ -6,14 +6,57 @@ import { IoLocationOutline, IoLocate } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
+import emailjs from '@emailjs/browser'
 
 const MainScreen = () => {
+
+
+  const form = useRef();
   const [show, setShow] = useState(false);
+  const [formData, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const [text] = useTypewriter({
     words: ["Web Development", "App Development", "Personal Branding"],
     loop: {},
   });
+  
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_33ujv8e', 'template_vhh9isc', form.current, {
+        publicKey: 'f1gcIXciOENiw9QlU',
+      })
+      .then(
+        () => {
+          setData({name:"",email:"",message:""})
+          toast.success("Message send",{
+            position:"top-center"
+          })
+          
+        },
+        (error) => {
+          console.log('FAILED...', error  );
+          prompt("message send")
+        },
+      );
+  };
+
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
 
   return (
     <div className="relative">
@@ -58,7 +101,7 @@ const MainScreen = () => {
         {/* Section 3 */}
         <section className="w-5/6  flex mx-auto">
           <div className="text-lg sm:text-[42px] w-full sm:w-[80%] leading-relaxed sm:leading-[75px]">
-            MediaSoft Solutions is a software development company that provides
+           Code Vision is a software development company that provides
             full cycle of product development from scratch.
           </div>
         </section>
@@ -354,7 +397,7 @@ const MainScreen = () => {
                   </div>
                   <div className=" w-[200px] bg-white ">
                     <div className="w-full items-center justify-center flex  flex-col  gap-3 mx-auto  py-5">
-                      <a href="mailto:adarshk8271@gmail.com">
+                      <a href="mailto:sebastian.chotuis@visionsdevlopers.com">
                         {" "}
                         <MdOutlineMail className="  text-5xl" />
                       </a>
@@ -362,10 +405,10 @@ const MainScreen = () => {
                       <div className=" flex justify-center items-center flex-col px- text-center">
                         <h5 className=" uppercase font-bold  text-sm">email</h5>
                         <a
-                          href="mailto:adarshk8271@gmail.com"
+                          href="mailto:sebastian.chotuis@visionsdevlopers.com"
                           className=" py-3 px-10"
                         >
-                          adarshk8271@gmail.com
+                         sebastian.chotuis@visionsdevlopers.com
                         </a>
                       </div>
                     </div>
@@ -406,23 +449,33 @@ const MainScreen = () => {
                     className=" w-[200px] h-[200px] rounded-full"
                   /></div>
                 </div>
-                <form action="" className=" md:w-[40%] w-full" >
+                <form onSubmit={sendEmail}  ref={form} className=" md:w-[40%] w-full" >
                   <div className=" flex flex-col justify-center gap-10 md:px-20">
                     <input
                       type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Full Name"
                       className=" border-t-0 border-l-0 border-r-0 h-[45px] outline-none sle"
                     />
                     <input
                       type="text"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="email"
                       className=" border-t-0 border-l-0 border-r-0 h-[45px] outline-none sle"
                     />
                     <textarea
-                      name=""
+                      name="message"
                       placeholder="message..."
                       rows="5"
-                      id=""
+                      id="message"
+                      value={formData.message}
+                      onChange={handleChange}
                     ></textarea>
                     <button className="  bg-[#38c43d] h-[40px] text-white w-full text-xl ">
                       Submit
